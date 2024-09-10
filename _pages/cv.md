@@ -11,35 +11,21 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.S, UW-Madison in Computer Sciences, 2023-onging
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* TEG Platform, Tencent (2023.09-2024.01)
+  * Conducted research on fine-tuning LLMs using LoRA for SQL code generation.
+  * Combined datasets and developed a comprehensive pipeline for fine-tuning, pruning, and evaluating LLMs on SQL tasks.
+  * Analyzed the effectiveness of the fine-tuning method (LoRA) and both unstructured and structured pruning methods (Wanda, SparseGPT) for generating SQL code.
+  * Explored the impact of model size and pruning percentage on the performance of the model in SQL code generation tasks.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Used to play violin lol...
+* Coding: Java, Python, Javascript, SQL .... 
 
 Publications
 ======
@@ -47,18 +33,14 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
+<Talks>
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
-======
+<Teaching>
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<Service and leadership>

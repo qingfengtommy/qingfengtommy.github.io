@@ -21,11 +21,11 @@ repository               : "qingfengtommy/qingfengtommy.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "bio_image.jpg"
   name             : "Gongbo Sun"
   pronouns         : # example: "she/her"  
   bio              : "CS Undegraduate student"
-  location         : "Earth"
+  location         : # "Earth"
   employer         : "UW-Madison"
   uri              : # URL
   email            : "gsun43@wisc.edu" 
@@ -79,8 +79,8 @@ publication_category:
   #  title: 'Books'
   # manuscripts:
   #  title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+  # conferences:
+  #  title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

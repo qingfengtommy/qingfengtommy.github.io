@@ -34,13 +34,13 @@ publist = {
                         "permalink":"/publication/"}
         
     },
-    "journal":{
-        "file": "pubs.bib",
-        "venuekey" : "journal",
-        "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
-    } 
+    #"journal":{
+    #    "file": "pubs.bib",
+    #    "venuekey" : "journal",
+    #    "venue-pretext" : "",
+    #    "collection" : {"name":"publications",
+    #                    "permalink":"/publication/"}
+    #} 
 }
 
 html_escape_table = {
@@ -68,7 +68,7 @@ for pubsource in publist:
         b = bibdata.entries[bib_id].fields
         
         try:
-            pub_year = f'{b["year"]}'
+            pub_year = f'{b["pub_year"]}'
 
             #todo: this hack for month and day needs some cleanup
             if "month" in b.keys(): 
@@ -106,7 +106,12 @@ for pubsource in publist:
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
 
             #add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
+            if publist[pubsource]["venuekey"] not in b.keys():
+                venue = publist[pubsource]["venue-pretext"].replace("{", "").replace("}","").replace("\\","")
+                if "arXiv" in b['journal']:
+                    venue = b['journal'].replace("{", "").replace("}","").replace("\\","")
+            else:
+                venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
 
             citation = citation + " " + html_escape(venue)
             citation = citation + ", " + pub_year + "."
